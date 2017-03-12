@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJAT.Web", "BJAT.Web\BJAT.Web.csproj", "{772FFB79-DE0E-4B6A-ADE0-2C47D010DDDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJAT.Data", "BJAT.Data\BJAT.Data.csproj", "{1DD172F6-A38D-4432-9E8F-FDB1810F3AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BJAT.Common.Enums", "BJAT.Common.Enums\BJAT.Common.Enums.csproj", "{99065EB4-031B-4D9C-AAF6-8B25982E02FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5FADB245-F51E-4D18-9DF6-D4D31B9B6DB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,19 @@ Global
 		{772FFB79-DE0E-4B6A-ADE0-2C47D010DDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772FFB79-DE0E-4B6A-ADE0-2C47D010DDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772FFB79-DE0E-4B6A-ADE0-2C47D010DDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD172F6-A38D-4432-9E8F-FDB1810F3AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD172F6-A38D-4432-9E8F-FDB1810F3AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD172F6-A38D-4432-9E8F-FDB1810F3AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD172F6-A38D-4432-9E8F-FDB1810F3AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99065EB4-031B-4D9C-AAF6-8B25982E02FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99065EB4-031B-4D9C-AAF6-8B25982E02FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99065EB4-031B-4D9C-AAF6-8B25982E02FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99065EB4-031B-4D9C-AAF6-8B25982E02FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99065EB4-031B-4D9C-AAF6-8B25982E02FA} = {5FADB245-F51E-4D18-9DF6-D4D31B9B6DB1}
 	EndGlobalSection
 EndGlobal
