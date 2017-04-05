@@ -1,0 +1,9 @@
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\bin\Debug\BJAT.Services.Contracts.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\bin\Debug\BJAT.Services.Contracts.pdb
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\bin\Debug\BJAT.Common.Enums.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\bin\Debug\BJAT.Data.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\bin\Debug\BJAT.Common.Enums.pdb
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\bin\Debug\BJAT.Data.pdb
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\obj\Debug\BJAT.Services.Contracts.csprojResolveAssemblyReference.cache
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\obj\Debug\BJAT.Services.Contracts.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Services.Contracts\obj\Debug\BJAT.Services.Contracts.pdb

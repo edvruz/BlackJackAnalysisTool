@@ -7,6 +7,6 @@
         Split = 3,
         Stand = 4,
         Insurance = 5,
-        GiveUp = 6
+        Surrender = 6
     }
 }

@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using BJAT.Common.Enums;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BJAT.Data.Entities
 {
     public class Deal
     {
-        public int DealId { get; set; }
+        public Guid DealId { get; set; }
+        public Guid UserId { get; set; }
         public double InitialBet { get; set; }
-        public int CountOfHands { get; set; }
         public double TotalBet { get; set; }
         public double TotalPayout { get; set; }
         public double Profit { get; set; }
@@ -15,7 +15,6 @@ namespace BJAT.Data.Entities
 
         public virtual List<Hand> HeroHands { get; set; } = new List<Hand>();
         public virtual List<Card> DealerCards { get; set; } = new List<Card>();
-        public virtual List<Hand> OtherHands { get; set; } = new List<Hand>();
-        public virtual List<HeroActionsEnum> HeroActions { get; set; } = new List<HeroActionsEnum>();
+        public virtual List<Mistake> HeroMistakes { get; set; } = new List<Mistake>();
     }
 }
