@@ -21,7 +21,6 @@ E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\Microsoft.Practices.
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\Microsoft.Web.Infrastructure.dll
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\Newtonsoft.Json.dll
-E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\SimpleCrypto.dll
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\System.Net.Http.Formatting.dll
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\System.Web.Helpers.dll
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\System.Web.Http.dll
@@ -65,3 +64,8 @@ E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\BJAT.Services.Contra
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\BJAT.Services.pdb
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\EntityFramework.xml
 E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\BJAT.Common.Enums.pdb
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\AutoMapper.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\AutoMapper.xml
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\SimpleCrypto.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\EntityFramework.SqlServer.dll
+E:\BlackJackAnalysisTool\BlackJackAnalysisTool\BJAT.Web\bin\EntityFramework.SqlServer.xml

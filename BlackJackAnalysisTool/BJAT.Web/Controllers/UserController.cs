@@ -1,4 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using System.Web.Security;
+using AutoMapper;
+using BJAT.Data.Entities;
 using BJAT.Services.Contracts;
 using BJAT.Web.Models;
 
@@ -25,9 +29,20 @@ namespace BJAT.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(UserModel user)
+        public ActionResult Register(UserRegisterModel user)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                var userEntity = Mapper.Map<User>(user);
+                if (_userService.RegisterUser(userEntity))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            ModelState.AddModelError("", "Data is not correct");
+
+            return View(user);
         }
 
         [HttpGet]
@@ -37,14 +52,28 @@ namespace BJAT.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult LogIn(UserModel user)
+        public ActionResult LogIn(UserLoginModel user)
         {
-            return View();
+            if (!ModelState.IsValid) return View(user);
+
+            if (_userService.IsUserCredentialsValid(user.UserNameOrEmail, user.Password))
+            {
+                FormsAuthentication.SetAuthCookie(user.UserNameOrEmail, false);
+                _userService.LoginSuccesfull(user.UserNameOrEmail);
+                return RedirectToAction("Index", "Home");
+            }
+
+            _userService.FailedToLogin(user.UserNameOrEmail);
+
+            ModelState.AddModelError("", "User credentials are incorrect");
+
+            return View(user);
         }
 
         public ActionResult LogOut()
         {
-            return View();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

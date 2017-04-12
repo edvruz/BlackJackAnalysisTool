@@ -36,6 +36,7 @@ namespace BJAT.Web
         {
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
             container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IAnalysisService, AnalysisService>();
         }
     }
 }

@@ -1,7 +1,43 @@
-﻿
+﻿@model BJAT.Web.Models.UserRegisterModel
 @{
     ViewBag.Title = "Register";
 }
 
 <h2>Register</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Registeration Failed, fields.");
+    <div>
+        <fieldset>
+            <legend>Register Form</legend>
+            <div>@Html.LabelFor(u => u.DisplayName)</div>
+            <div>
+                @Html.TextBoxFor(u => u.DisplayName)
+                @Html.ValidationMessageFor(u => u.DisplayName)
+            </div>
+            <div>@Html.LabelFor(u => u.LoginName)</div>
+            <div>
+                @Html.TextBoxFor(u => u.LoginName)
+                @Html.ValidationMessageFor(u => u.LoginName)
+            </div>
+            <div>@Html.LabelFor(u => u.Email)</div>
+            <div>
+                @Html.TextBoxFor(u => u.Email)
+                @Html.ValidationMessageFor(u => u.Email)
+            </div>
+            <div>@Html.LabelFor(u => u.Password)</div>
+            <div>
+                @Html.PasswordFor(u => u.Password)
+                @Html.ValidationMessageFor(u => u.Password)
+            </div>
+            <div>@Html.LabelFor(u => u.ReenterPassword)</div>
+            <div>
+                @Html.PasswordFor(u => u.ReenterPassword)
+                @Html.ValidationMessageFor(u => u.ReenterPassword)
+            </div>
+
+            <input type="submit" value="Register"/>
+        </fieldset>
+    </div>
+}
 

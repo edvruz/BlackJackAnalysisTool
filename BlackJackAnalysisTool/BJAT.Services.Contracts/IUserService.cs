@@ -8,6 +8,9 @@ namespace BJAT.Services.Contracts
     public interface IUserService
     {
         bool RegisterUser(User user);
-        bool IsUserCredentialsValid(string loginName, string password);
+        bool IsUserCredentialsValid(string loginNameOrEmail, string password);
+        bool IsUserNameAndEmailAvailable(string username, string email);
+        void FailedToLogin(string userNameOrEmail);
+        void LoginSuccesfull(string userNameOrEmail);
     }
 }

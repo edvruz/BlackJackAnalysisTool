@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using BJAT.Common.Enums;
 using BJAT.Data.Entities;
 using BJAT.Data.Repositories;
@@ -8,28 +9,26 @@ namespace BJAT.Data.EF.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(DbContext context) : base(context)
+        public AppContext Repo => Context as AppContext;
+
+        public UserRepository(AppContext context) : base(context)
         {
         }
-
-        public User GetUserByLoginName(string loginName)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public User GetUserByEmail(string email)
-        {
-            throw new System.NotImplementedException();
-        }
-
+        
         public IEnumerable<User> GetUsersByStatus(UserStatusEnum status)
         {
-            throw new System.NotImplementedException();
+            return Repo.Users.Where(x => x.Status.Equals(status));
+        }
+
+        public User GetUserByLoginNameOrEmail(string loginNameOrEmail)
+        {
+            return Repo.Users
+                .SingleOrDefault(x => x.LoginName.Equals(loginNameOrEmail) || x.Email.Equals(loginNameOrEmail));
         }
 
         public IEnumerable<User> GetUsersByRole(UserRoleEnum role)
         {
-            throw new System.NotImplementedException();
+            return Repo.Users.Where(x => x.Role.Equals(role));
         }
     }
 }

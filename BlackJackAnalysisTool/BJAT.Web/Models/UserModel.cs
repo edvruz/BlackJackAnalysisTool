@@ -6,25 +6,47 @@ using System.Web;
 
 namespace BJAT.Web.Models
 {
-    public class UserModel
+    public class UserRegisterModel
     {
         [Required]
-        [Display(Name="Vardas")]
+        [Display(Name="Name")]
         [StringLength(20)]
         public string DisplayName { get; set; }
+
         [Required]
-        [Display(Name = "El. paštas")]
+        [Display(Name = "E-Mail")]
         [EmailAddress]
         [StringLength(100)]
         public string Email { get; set; }
+
         [Required]
-        [Display(Name = "Vartotojo vardas")]
+        [Display(Name = "User name")]
         [StringLength(20)]
         public string LoginName { get; set; }
+
         [Required]
-        [Display(Name = "Slaptažodis")]
+        [Display(Name = "Password")]
         [DataType(DataType.Password)]
-        [StringLength(20,MinimumLength = 6)]
+        [StringLength(20, MinimumLength = 6)]
+        public string Password { get; set; }
+        
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "Slaptažodžiai nesutampa")]
+        [DataType(DataType.Password)]
+        public string ReenterPassword { get; set; }
+    }
+
+    public class UserLoginModel
+    {
+        [Required]
+        [Display(Name = "User name or E-Mail")]
+        [StringLength(100)]
+        public string UserNameOrEmail { get; set; }
+
+        [Required]
+        [Display(Name = "Password")]
+        [DataType(DataType.Password)]
+        [StringLength(20, MinimumLength = 6)]
         public string Password { get; set; }
     }
 }

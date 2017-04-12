@@ -17,6 +17,7 @@ namespace BJAT.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Bootstrapper.Initialise();
+            AutoMapperConfig.RegisterMaps();
         }
     }
 }
